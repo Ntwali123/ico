@@ -124,3 +124,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+body {
+  background-color: #0f172a;
+  color: white;
+}
+
+.bg-deep-purple {
+  background-color: #0f172a;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+

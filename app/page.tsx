@@ -7,6 +7,9 @@ export default function Home() {
       <section id="home">
         <Hero />
       </section>
+      <section id="what-is-ico">
+        <WhatIsICO />
+      </section>
     </main>
   );
 }

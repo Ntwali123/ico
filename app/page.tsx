@@ -1,7 +1,8 @@
-import Navbar from "@/components/navbar";
-import Hero from "@/components/hero";
-import WhatIsICO from "@/components/what-is-ico";
-import WhyChooseToken from "@/components/why-choose-token";
+import Navbar from "@/components/navbar"
+import Hero from "@/components/hero"
+import WhatIsIco from "@/components/what-is-ico"
+import WhyChooseToken from "@/components/why-choose-token"
+
 
 export default function Home() {
   return (
@@ -11,11 +12,13 @@ export default function Home() {
         <Hero />
       </section>
       <section id="what-is-ico">
-        <WhatIsICO />
+        <WhatIsIco />
       </section>
-      <section id="why-choose-token">
+      <section id="why-choose">
         <WhyChooseToken />
       </section>
+      
     </main>
-  );
+  )
 }
+

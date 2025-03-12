@@ -1,8 +1,15 @@
-import React from 'react'
+"use client";
+
+import type React from 'react';
+
+import { motion } from 'framer-motion';
+import { CreditCard, BarChart3, Shield, DollarSign } from 'lucide-react';
 
 export default function WhyChooseToken() {
   return (
-    <div>why-choose-token</div>
+    <section className="py-16 md:py-24 relative overflow-hidden">
+
+    </section>
   )
 }
 

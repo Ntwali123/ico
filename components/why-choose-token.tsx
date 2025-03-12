@@ -1,28 +1,19 @@
-"use client";
+"use client"
 
-import type React from "react";
+import type React from "react"
 
-import { motion } from "framer-motion";
-import { CreditCard, BarChart3, Shield, DollarSign } from "lucide-react";
+import { motion } from "framer-motion"
+import { CreditCard, BarChart3, Shield, DollarSign } from "lucide-react"
 
 export default function WhyChooseToken() {
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
+      {/* Background network effect */}
       <div className="absolute inset-0 pointer-events-none opacity-30">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern
-              id="grid"
-              width="50"
-              height="50"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M 50 0 L 0 0 0 50"
-                fill="none"
-                stroke="rgba(255,255,255,0.1)"
-                strokeWidth="1"
-              />
+            <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+              <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
@@ -39,8 +30,7 @@ export default function WhyChooseToken() {
         >
           <h2 className="text-4xl font-bold mb-4">Why Choose Our Token?</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            official
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official
           </p>
         </motion.div>
 
@@ -75,7 +65,7 @@ export default function WhyChooseToken() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 function FeatureCard({
@@ -84,25 +74,26 @@ function FeatureCard({
   description,
   delay = 0,
 }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  delay?: number;
+  icon: React.ReactNode
+  title: string
+  description: string
+  delay?: number
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
+      viewport={{ once: true }}
       className="text-center"
     >
       <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-pink-500 flex items-center justify-center relative">
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-pink-500 opacity-50 blur-md">
-          <div className="relative">{icon}</div>
-        </div>
-        <h3 className="text-xl font-bold mb-3">{title}</h3>
-        <p className="text-gray-300">{description}</p>
+        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-pink-500 opacity-50 blur-md"></div>
+        <div className="relative">{icon}</div>
       </div>
+      <h3 className="text-xl font-bold mb-3">{title}</h3>
+      <p className="text-gray-300">{description}</p>
     </motion.div>
-  );
+  )
 }
+

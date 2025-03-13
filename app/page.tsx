@@ -8,6 +8,8 @@ import TokenDetails from "@/components/token-details";
 import ExecutiveTeam from "@/components/executive-team";
 import Faq from "@/components/faq";
 import Documents from "@/components/documents";
+import ContactUs from "@/components/contact-us";
+import ScrollToTop from "@/components/scroll-to-top";
 
 export default function Home() {
   return (
@@ -43,6 +45,10 @@ export default function Home() {
       <section id="documents">
         <Documents />
       </section>
+      <section id="contact">
+        <ContactUs />
+      </section>
+      <ScrollToTop />
     </main>
   );
 }

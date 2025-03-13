@@ -7,7 +7,6 @@ import Roadmap from "@/components/roadmap"
 import TokenDetails from "@/components/token-details"
 import ExecutiveTeam from "@/components/executive-team"
 
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-deep-purple text-white overflow-hidden pt-16">
@@ -33,6 +32,10 @@ export default function Home() {
       <section id="executive-team">
         <ExecutiveTeam />
       </section>
+      <section id="team">
+        <ExecutiveTeam />
+      </section>
+      
     </main>
   )
 }

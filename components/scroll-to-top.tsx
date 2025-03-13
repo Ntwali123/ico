@@ -29,7 +29,18 @@ export default function ScrollToTop() {
 
   return (
     <AnimatePresence>
-        
+        {isVisible && (
+            <motion.button
+            initial={{ opacity: 0, y: .5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            transition={{ duration: 0.2 }}
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white shadow-lg hover:shadow-pink-500/20 transition-shadow"
+            >
+                <ArrowUp className="w-6 h-6 text-white"  />
+            </motion.button>
+        )}
     </AnimatePresence>
   )
 }

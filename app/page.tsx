@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import WhatIsIco from "@/components/what-is-ico"
 import WhyChooseToken from "@/components/why-choose-token"
+import TokenAllocation from "@/components/token-allocation"
+import Roadmap from "@/components/roadmap"
 
 
 export default function Home() {
@@ -17,7 +19,12 @@ export default function Home() {
       <section id="why-choose">
         <WhyChooseToken />
       </section>
-      
+      <section id="token-allocation">
+        <TokenAllocation />
+      </section>
+      <section id="roadmap">
+        <Roadmap />
+      </section>
     </main>
   )
 }

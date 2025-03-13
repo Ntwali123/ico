@@ -7,6 +7,7 @@ import Roadmap from "@/components/roadmap";
 import TokenDetails from "@/components/token-details";
 import ExecutiveTeam from "@/components/executive-team";
 import Faq from "@/components/faq";
+import Documents from "@/components/documents";
 
 export default function Home() {
   return (
@@ -38,6 +39,9 @@ export default function Home() {
       </section>
       <section id="faq">
         <Faq />
+      </section>
+      <section id="documents">
+        <Documents />
       </section>
     </main>
   );

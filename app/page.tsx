@@ -5,6 +5,7 @@ import WhyChooseToken from "@/components/why-choose-token"
 import TokenAllocation from "@/components/token-allocation"
 import Roadmap from "@/components/roadmap"
 import TokenDetails from "@/components/token-details"
+import ExecutiveTeam from "@/components/executive-team"
 
 
 export default function Home() {
@@ -28,6 +29,9 @@ export default function Home() {
       </section>
       <section id="token-details">
         <TokenDetails />
+      </section>
+      <section id="executive-team">
+        <ExecutiveTeam />
       </section>
     </main>
   )

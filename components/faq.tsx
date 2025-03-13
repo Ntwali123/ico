@@ -86,13 +86,65 @@ export default function Faq() {
   };
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-6">
-            <motion.div
-            
-            >
+      <div className="container mx-auto px-4 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-12 text-center"
+        >
+          <h2 className="text-4xl text-white font-bold mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Join the industry leaders to discuss where the markets are heading.
+            We accept token payments.
+          </p>
+        </motion.div>
 
-            </motion.div>
+        <div className="max-w-3xl mx-auto">
+          <div className="flex flex-wrap justify-center mb-8 gap-2">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={cn(
+                  "px-4 py-2 text-sm font-medium transition-colors",
+                  activeTab === tab.id
+                    ? "text-pink-500 border-b-2 border-pink-500"
+                    : "text-gray-400 hover:text-white"
+                )}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="space-y-4">
+            {filteredQuestions.map((q) => (
+              <motion.div
+                key={q.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+               <button
+                  onClick={() => toggleQuesiton(q.id)}
+                  className="w-full flex items-center justify-between p-4 text-left bg-purple-900/30 hover:bg-purple-900/50 transition-colors"
+                >
+                  <h3 className="text-lg font-medium">{q.question}</h3>
+                  {openQuestion === q.id ? (
+                    <ChevronUp className="h-5 w-5 text-pink-500" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-gray-400" />
+                  )}
+                </button>
+              </motion.div>
+            ))}
+          </div>
         </div>
+      </div>
     </section>
-  )
+  );
 }

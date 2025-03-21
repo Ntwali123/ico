@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function TokenDetails() {
   return (
@@ -16,7 +16,8 @@ export default function TokenDetails() {
         >
           <h2 className="text-4xl font-bold mb-4">ICO Token Details</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Join the industry leaders to discuss where the markets are heading. We accept token payments.
+            Join the industry leaders to discuss where the markets are heading.
+            We accept token payments.
           </p>
         </motion.div>
 
@@ -28,9 +29,17 @@ export default function TokenDetails() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <DetailCard title="Start" value="Aug 8, 2021 (9:00AM GMT)" gradient="from-blue-600 to-blue-400" />
+            <DetailCard
+              title="Start"
+              value="Aug 8, 2021 (9:00AM GMT)"
+              gradient="from-blue-600 to-blue-400"
+            />
 
-            <DetailCard title="End" value="Feb 10, 2022 (9:00AM GMT)" gradient="from-indigo-600 to-indigo-400" />
+            <DetailCard
+              title="End"
+              value="Feb 10, 2022 (9:00AM GMT)"
+              gradient="from-indigo-600 to-indigo-400"
+            />
 
             <DetailCard
               title="Number Of Tokens For Sale"
@@ -50,7 +59,11 @@ export default function TokenDetails() {
               gradient="from-red-600 to-red-400"
             />
 
-            <DetailCard title="Acceptable Currencies" value="ETH, BTC, LTC" gradient="from-amber-600 to-amber-400" />
+            <DetailCard
+              title="Acceptable Currencies"
+              value="ETH, BTC, LTC"
+              gradient="from-amber-600 to-amber-400"
+            />
           </motion.div>
 
           <motion.div
@@ -61,7 +74,7 @@ export default function TokenDetails() {
             className="flex justify-center"
           >
             <Image
-              src="/placeholder.svg?height=500&width=500"
+              src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=500&h=500&fit=crop"
               alt="Token Details Illustration"
               width={500}
               height={500}
@@ -71,7 +84,7 @@ export default function TokenDetails() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function DetailCard({
@@ -79,17 +92,18 @@ function DetailCard({
   value,
   gradient,
 }: {
-  title: string
-  value: string
-  gradient: string
+  title: string;
+  value: string;
+  gradient: string;
 }) {
   return (
     <div className="bg-purple-900/30 rounded-lg p-4 border border-purple-800/30">
-      <div className={`bg-gradient-to-r ${gradient} text-white p-4 -mt-8 rounded-lg shadow-lg mb-3`}>
+      <div
+        className={`bg-gradient-to-r ${gradient} text-white p-4 -mt-8 rounded-lg shadow-lg mb-3`}
+      >
         <h3 className="font-bold">{title}</h3>
       </div>
       <p className="text-gray-300">{value}</p>
     </div>
-  )
+  );
 }
-

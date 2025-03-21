@@ -1,34 +1,38 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Facebook, Twitter, Linkedin } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Facebook, Twitter, Linkedin } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ExecutiveTeam() {
   const team = [
     {
       name: "Charlee Mangar",
       role: "Co-founder & COO",
-      image: "/placeholder.svg?height=400&width=300",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
     },
     {
       name: "Jason Morales",
       role: "CTO & Software Engineer",
-      image: "/placeholder.svg?height=400&width=300",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
     },
     {
       name: "Louis Baker",
       role: "CTO & Software Engineer",
-      image: "/placeholder.svg?height=400&width=300",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
       socials: true,
     },
     {
       name: "Dianne Russell",
       role: "Sr.Backend developer",
-      image: "/placeholder.svg?height=400&width=300",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
     },
-  ]
+  ];
 
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
@@ -42,7 +46,8 @@ export default function ExecutiveTeam() {
         >
           <h2 className="text-4xl font-bold mb-4">Executive Team</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Our team player alway finds effective ways to improve the product and process
+            Our team player alway finds effective ways to improve the product
+            and process
           </p>
         </motion.div>
 
@@ -60,7 +65,7 @@ export default function ExecutiveTeam() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function TeamMember({
@@ -70,11 +75,11 @@ function TeamMember({
   socials,
   delay = 0,
 }: {
-  name: string
-  role: string
-  image: string
-  socials?: boolean
-  delay?: number
+  name: string;
+  role: string;
+  image: string;
+  socials?: boolean;
+  delay?: number;
 }) {
   return (
     <motion.div
@@ -100,13 +105,22 @@ function TeamMember({
 
           {socials && (
             <div className="flex space-x-3 mt-3">
-              <Link href="#" className="text-white hover:text-pink-500 transition-colors">
+              <Link
+                href="#"
+                className="text-white hover:text-pink-500 transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-white hover:text-pink-500 transition-colors">
+              <Link
+                href="#"
+                className="text-white hover:text-pink-500 transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-white hover:text-pink-500 transition-colors">
+              <Link
+                href="#"
+                className="text-white hover:text-pink-500 transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </Link>
             </div>
@@ -114,6 +128,5 @@ function TeamMember({
         </div>
       </div>
     </motion.div>
-  )
+  );
 }
-

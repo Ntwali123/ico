@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Mail, Phone, Send } from "lucide-react"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, Send } from "lucide-react";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -12,22 +12,24 @@ export default function ContactUs() {
     email: "",
     phone: "",
     message: "",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData)
+    console.log("Form submitted:", formData);
     // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" })
+    setFormData({ name: "", email: "", phone: "", message: "" });
     // Show success message
-    alert("Message sent successfully!")
-  }
+    alert("Message sent successfully!");
+  };
 
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
@@ -51,15 +53,24 @@ export default function ContactUs() {
             className="space-y-6"
           >
             <p className="text-gray-300">
-              We are always open and we welcome and questions you have for our team. If you wish to get in touch, please
-              fill out the form below.
+              We are always open and we welcome and questions you have for our
+              team. If you wish to get in touch, please fill out the form below.
             </p>
 
-            <ContactItem icon={<Mail className="h-5 w-5" />} text="info@yourcompany.com" />
+            <ContactItem
+              icon={<Mail className="h-5 w-5" />}
+              text="info@yourcompany.com"
+            />
 
-            <ContactItem icon={<Phone className="h-5 w-5" />} text="+84 0977425031" />
+            <ContactItem
+              icon={<Phone className="h-5 w-5" />}
+              text="+84 0977425031"
+            />
 
-            <ContactItem icon={<Send className="h-5 w-5" />} text="Join us on Telegram" />
+            <ContactItem
+              icon={<Send className="h-5 w-5" />}
+              text="Join us on Telegram"
+            />
           </motion.div>
 
           <motion.div
@@ -119,23 +130,16 @@ export default function ContactUs() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-function ContactItem({
-  icon,
-  text,
-}: {
-  icon: React.ReactNode
-  text: string
-}) {
+function ContactItem({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <div className="flex items-center">
       <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-pink-500 flex items-center justify-center mr-4">
         {icon}
-      </div>
+     </div>
       <span>{text}</span>
     </div>
-  )
+  );
 }
-

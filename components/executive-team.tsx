@@ -1,9 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Facebook, Twitter, Linkedin } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ExecutiveTeam() {
   const team = [
@@ -24,7 +22,6 @@ export default function ExecutiveTeam() {
       role: "CTO & Software Engineer",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
-      socials: true,
     },
     {
       name: "Dianne Russell",
@@ -58,7 +55,6 @@ export default function ExecutiveTeam() {
               name={member.name}
               role={member.role}
               image={member.image}
-              socials={member.socials}
               delay={index * 0.1}
             />
           ))}
@@ -72,13 +68,11 @@ function TeamMember({
   name,
   role,
   image,
-  socials,
   delay = 0,
 }: {
   name: string;
   role: string;
   image: string;
-  socials?: boolean;
   delay?: number;
 }) {
   return (
@@ -102,29 +96,6 @@ function TeamMember({
         <div className="absolute bottom-0 left-0 right-0 p-6">
           <h3 className="text-xl font-bold text-white">{name}</h3>
           <p className="text-gray-300">{role}</p>
-
-          {socials && (
-            <div className="flex space-x-3 mt-3">
-              <Link
-                href="#"
-                className="text-white hover:text-pink-500 transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-white hover:text-pink-500 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-white hover:text-pink-500 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
-            </div>
-          )}
         </div>
       </div>
     </motion.div>

@@ -33,9 +33,6 @@ export default function Home() {
       <section id="token-details">
         <TokenDetails />
       </section>
-      <section id="executive-team">
-        <ExecutiveTeam />
-      </section>
       <section id="team">
         <ExecutiveTeam />
       </section>

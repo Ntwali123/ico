@@ -10,42 +10,44 @@ import Faq from "@/components/faq";
 import Documents from "@/components/documents";
 import ContactUs from "@/components/contact-us";
 import ScrollToTop from "@/components/scroll-to-top";
+import dynamic from "next/dynamic"; 
+
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-deep-purple text-white overflow-hidden pt-16">
-      <Navbar />
-      <section id="home">
-        <Hero />
-      </section>
-      <section id="what-is-ico">
-        <WhatIsIco />
-      </section>
-      <section id="why-choose">
-        <WhyChooseToken />
-      </section>
-      <section id="token-allocation">
-        <TokenAllocation />
-      </section>
-      <section id="roadmap">
-        <Roadmap />
-      </section>
-      <section id="token-details">
-        <TokenDetails />
-      </section>
-      <section id="team">
-        <ExecutiveTeam />
-      </section>
-      <section id="faq">
-        <Faq />
-      </section>
-      <section id="documents">
-        <Documents />
-      </section>
-      <section id="contact">
-        <ContactUs />
-      </section>
-      <ScrollToTop />
-    </main>
+      <main className="min-h-screen bg-deep-purple text-white overflow-hidden pt-16">
+        <Navbar />
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="what-is-ico">
+          <WhatIsIco />
+        </section>
+        <section id="why-choose">
+          <WhyChooseToken />
+        </section>
+        <section id="token-allocation">
+          <TokenAllocation />
+        </section>
+        <section id="roadmap">
+          <Roadmap />
+        </section>
+        <section id="token-details">
+          <TokenDetails />
+        </section>
+        <section id="team">
+          <ExecutiveTeam />
+        </section>
+        <section id="faq">
+          <Faq />
+        </section>
+        <section id="documents">
+          <Documents />
+        </section>
+        <section id="contact">
+          <ContactUs />
+        </section>
+        <ScrollToTop />
+      </main>
   );
 }

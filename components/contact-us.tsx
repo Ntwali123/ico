@@ -23,11 +23,8 @@ export default function ContactUs() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
-    // Reset form
     setFormData({ name: "", email: "", phone: "", message: "" });
-    // Show success message
     alert("Message sent successfully!");
   };
 
